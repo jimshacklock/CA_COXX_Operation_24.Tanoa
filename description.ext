@@ -1,0 +1,386 @@
+// ============================================================================================
+
+// F3 - Mission Header
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+class Header
+{
+	// Available gameTypes:
+	// Coop:	|	Coop Mission: The Bread and Butter of CA missions
+	// DM		|	Death Match
+	// TDM		|	Team Death Match
+	// CTF		|	Capture The Flag (or, nuke)
+	// SC		|	Sector Control (Think insurgency - the red/green squares)
+	// RPG		|	Skyrim
+	// Sandbox	|	Free Game type, think Shady Swindle
+	// Seize	|	Seize a location
+	// Defend	|	Defend a location
+	gameType = Coop;
+	minPlayers = 1;
+	maxPlayers = 100;
+};
+
+// ============================================================================================
+
+// F3 - Loading Screen
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+onLoadName = "*** Insert mission name here. ***";
+onLoadMission = "Made with the F3_CA Mission Development Framework";
+author = "*** Insert mission author name here. ***";
+loadScreen = "ca_logo_large.jpg";
+
+// ============================================================================================
+
+// F3 - Debug Console
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+enableDebugConsole = 1;
+
+// ============================================================================================
+
+// F3 - Respawn Settings
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+// 1	|	Respawn as Bird (for normal mission, no reinforcements).
+// 2	|	Respawn on death location without gear, used in special missions.
+// 3	|	Respawn at base marker (used when reinforcements are an option).
+// 4	|	Respawn either in group if an AI slot is filled or as seagull.
+// If 3 is chosen, place down makers with the following names as necessary:
+// respawn_west, respawn_guerilla, respawn_east, respawn_civillian.
+
+respawn = 3; //Suggested NOT to change this
+respawndelay = 3;
+respawnOnStart = 0;
+respawnTemplates[] = {"ca_respawn"};	// remove "f_spectator" when using respawn.
+respawnDialog = 0;
+
+// ============================================================================================
+
+// CA - RotorLib Simulation Setting
+// 0 - default: player options, 1 - all on, 2 - all off.
+
+forceRotorLibSimulation = 0;
+
+// ============================================================================================
+
+// CA - Disable playableunits AI
+
+disabledAI = 1;
+
+// ============================================================================================
+
+// CA Remove corpse manager
+
+corpseManagerMode = 1;
+corpseLimit = 15;
+corpseRemovalMinTime = 60; //seconds
+corpseRemovalMaxTime = 300; //seconds
+
+// ============================================================================================
+// F3 - Start of Notifications block.
+
+class cfgNotifications
+{
+	// Notification Template
+	class Template
+	{
+		title = ""; // Tile displayed as text on black background. Filled by arguments.
+		iconPicture = ""; // Small icon displayed in left part. Colored by "color", filled by arguments.
+		iconText = ""; // Short text displayed over the icon. Colored by "color", filled by arguments.
+		description = ""; // Brief description displayed as structured text. Colored by "color", filled by arguments.
+		color[] = {1,1,1,1}; // Icon and text color
+		duration = 5; // How many seconds will the notification be displayed
+		priority = 0; // Priority; higher number = more important; tasks in queue are selected by priority
+		difficulty[] = {}; // Required difficulty settings. All listed difficulties has to be enabled
+	};
+
+	// A generic warning notification
+	class Alert
+	{
+		title = "ALERT";
+		description = "%1";
+		iconPicture="\A3\ui_f\data\map\markers\military\warning_ca.paa";
+		duration = 3;
+		priority = 9;
+	};
+
+	// Notifications for the F3 Safe Start Component
+	class SafeStart
+	{
+		title = "SAFE START";
+		description = "%1";
+		iconPicture="\A3\UI_F\data\IGUI\Cfg\Actions\settimer_ca.paa";
+		duration = 10;
+		priority = 0;
+	};
+	class SafeStartMissionStarting
+	{
+		title = "SAFE START";
+		description = "%1";
+		iconPicture="\A3\UI_F\data\IGUI\Cfg\Actions\settimer_ca.paa";
+		duration = 3;
+		priority = 1;
+	};
+
+	// Notification for the F3 Mapclick Teleport component
+	class MapClickTeleport {
+		title= "NOTE";
+		description= "%1";
+		iconPicture = "\A3\ui_f\data\map\markers\military\start_ca.paa";
+		duration = 3;
+		priority = 5;
+	};
+
+	// Notification for the F3 Mapclick Supply Drop component
+	class MapClickSupplyDrop {
+		title= "NOTE";
+		description= "%1";
+		iconPicture = "\A3\ui_f\data\map\markers\military\start_ca.paa";
+		duration = 3;
+		priority = 5;
+	};
+
+	// Notification for the F3 JIP Component
+	class JIP {
+		title= "REINFORCEMENTS";
+		description= "%1";
+		iconPicture = "\A3\ui_f\data\map\markers\military\flag_ca.paa";
+		duration = 3;
+		priority = 5;
+	};
+};
+
+// ============================================================================================
+
+// F3 - Start of Params code blocks.
+// WARNING: DO NOT DELETE OR COMMENT OUT THIS CODE BLOCK
+
+// ============================================================================================
+
+// F3 - Briefing Template
+// Credits: BIS - Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+class CfgDebriefing
+{
+	class End1
+	{
+		title = "Mision Successful";
+		subtitle = "";
+		description = "Please post to the AAR thread!";
+		// pictureBackground = "";
+		// picture = "";
+		// pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class End2
+	{
+		title = "Mission Failed";
+		subtitle = "";
+		description = "Please post to the AAR thread!";
+		// pictureBackground = "";
+		// picture = "";
+		// pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class End3
+	{
+		title = "BLUFOR WIN";
+		subtitle = "";
+		description = "Please post to the AAR thread!";
+		// pictureBackground = "";
+		// picture = "";
+		// pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class End4
+	{
+		title = "OPFOR WIN";
+		subtitle = "";
+		description = "Please post to the AAR thread!";
+		// pictureBackground = "";
+		// picture = "";
+		// pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class End5
+	{
+		title = "INDFOR WIN";
+		subtitle = "";
+		description = "Please post to the AAR thread!";
+		// pictureBackground = "";
+		// picture = "";
+		// pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class End6
+	{
+		title = "Mission Broke";
+		subtitle = "";
+		description = "Please post to the AAR thread!";
+		// pictureBackground = "";
+		// picture = "";
+		// pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+};
+
+// ============================================================================================
+
+// F3 - Respawn Templates
+// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
+
+class CfgRespawnTemplates
+{
+/*
+	class f_Spectator
+	{
+		onPlayerRespawn = "f_fnc_CamInit";
+	};
+
+	// F3 JIP Menu
+	class f_JIP
+	{
+		onPlayerRespawn = "f\JIP\f_JIP_playerRespawn.sqf";
+	};
+*/
+class ca_respawn
+{
+    onPlayerRespawn = "ca\respawn\ca_onDeath.sqf";
+};
+};
+
+// ============================================================================================
+
+// F3 - Menu components
+// DO NOT REMOVE OR DISABLE THIS BLOCK OF CODE
+
+// Menu components for the JIP Menu
+#include "f\JIP\f_JIP_kitpicker.h"
+#include "f\JIP\f_JIP_grppicker.h"
+
+// ============================================================================================
+
+// F3 - Functions
+// DO NOT REMOVE OR DISABLE THIS BLOCK OF CODE
+
+class CfgFunctions
+{
+	#include "ca\ca_functions.hpp"
+	class F // Defines the "owner"
+	{
+		class mpEnd
+		{
+			file = "f\mpEnd";
+			class mpEnd{};
+			class mpEndReceiver{};
+		};
+		class assignGear
+		{
+			// Defines the functions to preInit the compling of the assignGear function used by units.
+			file = "f\assignGear";
+			class assignGear{};
+		};
+		class FTMemberMarkers
+		{
+			file = "f\FTMemberMarkers";
+			class SetLocalFTMemberMarkers{};
+			class GetMarkerColor{};
+			class LocalFTMarkerSync{};
+		};
+		#include "f\FTMemberMarkers\smoothMarkers\functions.hpp"
+		class mapClickTeleport
+		{
+			file = "f\mapClickTeleport";
+			class mapClickTeleportUnit{};
+			class mapClickTeleportGroup{};
+		};
+		class mapClickSupplyDrop
+		{
+			file = "f\mapClickSupplyDrop";
+			class mapClickSupplyDropUnit{};
+		};
+		class medical
+		{
+			file = "f\medical";
+			class WoundUnitRandomly{};
+		};
+		class zeus
+		{
+			file = "f\zeus";
+			class zeusInit{};
+			class zeusAddAddons{};
+			class zeusAddObjects{};
+		};
+		class safeStart
+		{
+			file = "f\safeStart";
+			class safety{};
+		};
+	};
+};
+
+
+// ============================================================================================
+
+// F3 - Custom Insignia
+// Default insignia now part of Gibbs_Insignia addon. Mission specific insignia can be added in the define below.
+
+class CfgUnitInsignia {
+	#include "f\assignGear\insignia\define.hpp"
+};
+// Adds to the debriefing possible kills and possible reasons for deaths as well, so after an operation don't go straight to mission select. Its the fourth tab after score.
+class CfgDebriefingSections {
+		class acex_killTracker {
+				title = "Acex Killed Events";
+				variable = "acex_killTracker_outputText";
+		};
+};
+// Makes splendid camera still show chat after quitting splendid camera.
+class Extended_DisplayUnload_EventHandlers {
+    class RscDisplayCamera {
+        ca_fixcamera = "showChat true";
+    };
+};
+
+// F3 CA Custom config for dialogs and stuff
+#include "ca\defines.hpp"
+#include "ca\ca_config.hpp"
+
+// Custom Sounds - Be advised, if you use a cfgSound in a mission,
+// it will play until the file stops, Sounds cannot be interrupted
+// unless the object playing the sound is killed or otherwise destroyed.
+// Sound files can be played in 3D, and are an effect for volume purposes.
+/*
+class CfgSounds
+{
+	sounds[] = {};
+	class wolf1
+	{
+		// how the sound is referred to in the editor (e.g. trigger effects)
+		name = "my_wolf_sound";
+		// filename, volume, pitch
+		sound[] = {"wolf1.ogg", 1, 1};
+		// subtitle delay in seconds, subtitle text
+		titles[] = {1, "*wolf growls*"};
+	};
+};
+*/
+// Custom Music - Can generally be stopped, but plays globally. Cannot be played in 3D
+// from an object but is affected by the Music volume slider.
+/*
+class CfgMusic
+{
+	tracks[]={};
+
+	class MarsIntro
+	{
+		name = "";
+		sound[] = {"filename.ogg", db+0, 1.0};
+	};
+	class Ludwig9
+	{
+		name = "";
+		sound[] = {"filename.ogg", db+10, 1.0};
+	};
+};
+*/
