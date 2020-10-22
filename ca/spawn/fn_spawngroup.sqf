@@ -31,8 +31,8 @@ _spawnpos = _posdir select 0;
 
 switch(_side) do {
 	case west: {_group = createGroup [west,true]; _unittype = "B_Soldier_F";};
-	case east: {_group = createGroup [east,true]; _unittype = "O_Soldier_F";};
-	case independent: {_group = createGroup [independent,true]; _unittype = "I_Soldier_F";};
+	case east: {_group = createGroup [east,true]; _unittype = "O_T_Soldier_F";};
+	case independent: {_group = createGroup [independent,true]; _unittype = "I_C_Soldier_Para_1_F";};
 	default {_group = createGroup [east,true]};
 };
 

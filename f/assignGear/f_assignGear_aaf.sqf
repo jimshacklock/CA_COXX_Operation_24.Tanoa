@@ -61,14 +61,14 @@ _silencer1 = "muzzle_snds_M";	// 5.56 suppressor
 _silencer2 = "muzzle_snds_H";	// 6.5 suppressor
 
 _scope1 = "optic_ACO_grn";	// Holosight
-_scope2 = "optic_MRCO";			// MRCO Scope - 1x - 6x
+_scope2 = "optic_KHS_old";			// MRCO Scope - 1x - 6x
 _scope3 = "optic_SOS";			// SOS Scope - 18x - 75x
 
 _bipod1 = "bipod_01_F_snd";		// Default bipod
 _bipod2 = "bipod_02_F_blk";		// Black bipod
 
 // Default setup
-_attachments = [_attach1,_scope1]; // The default attachment set for most units, overwritten in the individual unitType
+_attachments = [_attach2]; // The default attachment set for most units, overwritten in the individual unitType
 
 // [] = remove all
 // [_attach1,_scope1,_silencer] = remove all, add items assigned in _attach1, _scope1 and _silencer1
@@ -94,30 +94,30 @@ _assistantfraction = 0.5;
 // WEAPON SELECTION
 
 // Standard Riflemen 
-_rifle = ["arifle_Mk20_F"];
-_riflemag = "30Rnd_556x45_Stanag";
-_riflemag_tr = "30Rnd_556x45_Stanag_Tracer_Yellow";
+_rifle = ["arifle_AKM_F"];
+_riflemag = "30Rnd_762x39_Mag_F";
+_riflemag_tr = "30Rnd_762x39_Mag_Tracer_F";
 _riflemagamount = 10;
 _rifleclasses = ["rif","aar","lat","ammg"];
 
 // Standard Carabineer
-_carbine = ["arifle_Mk20C_F"];
-_carbinemag = "30Rnd_556x45_Stanag";
-_carbinemag_tr = "30Rnd_556x45_Stanag_Tracer_Yellow";
+_carbine = ["arifle_AKS_F"];
+_carbinemag = "30Rnd_545x39_Mag_F";
+_carbinemag_tr = "30Rnd_545x39_Mag_Tracer_F";
 _carbinemagamount = 6;
 _carbineclasses = ["car","med","sur","mat","amat","mtr","amtr","eng","dem","hmg","ahmg","hat","ahat","sam","asam"];
 
 // Standard Submachine Gun/Personal Defence Weapon
-_smg = ["hgun_PDW2000_F"];
-_smgmag = "30Rnd_9x21_Mag";
-_smgmag_tr = "30Rnd_9x21_Yellow_Mag";
+_smg = ["SMG_05_F"];
+_smgmag = "30Rnd_9x21_Mag_SMG_02";
+_smgmag_tr = "30Rnd_9x21_Mag_SMG_02_Tracer_Yellow";
 _smgmagamount = 5;
 _smgclasses = ["smg","pil","pcc","vc","vg","vd","uav","rad","csw","acsw"];
 
 // Rifle with GL and HE grenades
-_glrifle = ["arifle_Mk20_GL_F"];
-_glriflemag = "30Rnd_556x45_Stanag";
-_glriflemag_tr = "30Rnd_556x45_Stanag_Tracer_Yellow";
+_glrifle = ["arifle_AK12_GL_F"];
+_glriflemag = "30Rnd_762x39_Mag_F";
+_glriflemag_tr = "30Rnd_762x39_Mag_Tracer_F";
 _glriflemagamount = 10;
 _glmag = "1Rnd_HE_Grenade_shell";
 _glmagamount = 10;
@@ -168,15 +168,15 @@ _pistolclasses = ["co","sl","ar","mmg","rad","sur","dm","sn"];
 // UNIQUE, ROLE-SPECIFIC EQUIPMENT
 
 // Automatic Rifleman
-_AR = ["LMG_Mk200_F"];
-_ARmag = "200Rnd_65x39_cased_Box";
-_ARmag_tr = "200Rnd_65x39_cased_Box_Tracer";
+_AR = ["arifle_RPK12_F"];
+_ARmag = "75Rnd_762x39_Mag_F";
+_ARmag_tr = "75Rnd_762x39_Mag_Tracer_F";
 _ARmagamount = 7;
 
 // Medium MG
-_MMG = "MMG_02_sand_F";
-_MMGmag = "130Rnd_338_Mag";
-_MMGmag_tr = "ACE_130Rnd_338_Mag_yellow";
+_MMG = "LMG_03_F";
+_MMGmag = "200Rnd_556x45_Box_F";
+_MMGmag_tr = "200Rnd_556x45_Box_Tracer_F";
 _MMGmagamount = 4;
 
 // NON-DLC ALTERNATIVE:
@@ -185,33 +185,33 @@ _MMGmagamount = 4;
 // _MMGmag_tr = ""150Rnd_762x54_Box"_Tracer";
 
 // Marksman rifle - DM
-_DMrifle = "srifle_EBR_F";
-_DMriflemag = "20Rnd_762x51_Mag";
+_DMrifle = "srifle_DMR_06_hunter_F";
+_DMriflemag = "ACE_20Rnd_762x51_Mag_tracer_yellow";
 _DMriflemagamount = 10;
 // Mk14
 //_DMrifle = "srifle_DMR_06_olive_F";
 //_DMriflemag = "20Rnd_762x51_Mag";
 
 // Light anti tank. To indicate that a weapon is single shot, write _RATmag = "";
-_RAT = "launch_NLAW_F";
-_RATmag = "NLAW_F";
+_RAT = "launch_RPG7_F";
+_RATmag = "RPG7_F";
 _RATmagamount = 2;
 // Medium AT
-_MAT = "launch_NLAW_F";
-_MATmag1 = "NLAW_F";
-_MATmag2 = "NLAW_F";
+_MAT = "launch_RPG7_F";
+_MATmag1 = "RPG7_F";
+_MATmag2 = "RPG7_F";
 _MATmag1amount = 2;
 _MATmag2amount = 1;
 
 // Surface Air
-_SAM = "launch_I_Titan_F";
+_SAM = "launch_B_Titan_tna_F";
 _SAMmag = "Titan_AA";
 _SAMmagamount = 2;
 
 // Heavy AT
-_HAT = "launch_I_Titan_short_F";
-_HATmag1 = "Titan_AT";
-_HATmag2 = "Titan_AP";
+_HAT = "launch_MRAWS_olive_rail_F";
+_HATmag1 = "MRAWS_HEAT_F";
+_HATmag2 = "MRAWS_HE_F";
 _HATmag1amount = 2;
 _HATmag2amount = 1;
 
@@ -271,47 +271,47 @@ _specOp = [];
 _officer = ["co","sur","rad"];
 
 // Default uniform - Medium uniform
-_glasses = [];
-_helmet = ["H_HelmetIA"];
-_uniform = ["U_I_CombatUniform","U_I_CombatUniform_shortsleeve"];
-_vest = ["V_PlateCarrierIA1_dgtl"]; 	// default for all infantry classes
-_backpack = ["B_AssaultPack_dgtl"];
+_glasses = ["","","G_Bandanna_beast","G_Shades_Red","G_Squares_Tinted","G_Bandanna_oli","G_Aviator"];
+_helmet = ["","","H_Bandanna_gry","H_Cap_grn","H_PASGT_basic_olive_F","H_Booniehat_oli","H_Bandanna_surfer_grn","H_Helmet_Skate"];
+_uniform = ["U_I_C_Soldier_Para_1_F","U_I_C_Soldier_Para_2_F","U_I_C_Soldier_Para_3_F","U_I_C_Soldier_Para_4_F","U_I_C_Soldier_Para_5_F"];
+_vest = ["V_Chestrig_khk","V_Chestrig_blk","V_Chestrig_rgr","V_Chestrig_oli"]; 	// default for all infantry classes
+_backpack = ["B_Messenger_Olive_F","B_Messenger_Gray_F","B_Messenger_Black_F"];
 _outfit = [_glasses,_helmet,_uniform,_vest,_backpack];
 
 // Light Uniform, big backpack
 _lightGlasses = _glasses;
 _lightHelmet = _helmet;
 _lightuniform = _uniform;
-_lightVest = ["V_BandollierB_cbr","V_BandollierB_khk"];
+_lightVest = ["V_Pocketed_olive_F","V_Pocketed_black_F","V_Pocketed_coyote_F"];
 _lightBackpack = ["B_Carryall_oli"]; //Large backpack
 _lightOutfit = [_lightGlasses,_lightHelmet,_lightuniform,_lightVest,_lightBackpack];
 
 // Heavy Uniform, small backpack
-_heavyGlasses = [];
+_heavyGlasses = _glasses;
 _heavyHelmet = _helmet;
 _heavyUniform = _uniform;
 _heavyVest = ["V_PlateCarrierIAGL_dgtl","V_PlateCarrierIAGL_oli"];
-_heavyBackpack = ["B_AssaultPack_dgtl"]; //Small backpack to avoid overencumberance
+_heavyBackpack = ["B_LegStrapBag_olive_F","B_LegStrapBag_black_F","B_LegStrapBag_coyote_F"]; //Small backpack to avoid overencumberance
 _heavyOutfit = [_heavyGlasses,_heavyHelmet,_heavyUniform,_heavyVest,_heavyBackpack];
 
 // Pilot
-_pilotGlasses = [];
-_pilotHelmet = ["H_PilotHelmetHeli_I"];
-_pilotUniform = ["U_I_HeliPilotCoveralls"];
-_pilotVest = ["V_TacVest_oli"];
-_pilotBackpack = ["B_AssaultPack_dgtl"];
+_pilotGlasses = _glasses;
+_pilotHelmet = ["H_Cap_marshal","H_Cap_headphones","H_HeadSet_red_F"];
+_pilotUniform = _uniform;
+_pilotVest = _lightVest;
+_pilotBackpack = _backpack;
 _pilotOutfit = [_pilotGlasses,_pilotHelmet,_pilotUniform,_pilotVest,_pilotBackpack];
 
 // Crewman
-_crewGlasses = [];
-_crewHelmet = ["H_HelmetCrew_I"];
+_crewGlasses = _glasses;
+_crewHelmet = _helmet;
 _crewUniform = _uniform;
-_crewVest = ["V_TacVest_oli"];
-_crewBackpack = _backpack;
+_crewVest = _lightVest;
+_crewBackpack = ["B_LegStrapBag_olive_F","B_LegStrapBag_black_F","B_LegStrapBag_coyote_F"];
 _crewOutfit = [_crewGlasses,_crewHelmet,_crewUniform,_crewVest,_crewBackpack];
 
 // Ghillie
-_ghillieGlasses = [];
+_ghillieGlasses = _glasses;
 _ghillieHelmet = [];
 _ghillieUniform = ["U_I_GhillieSuit"]; //DLC alternatives: ["U_B_FullGhillie_lsh","U_B_FullGhillie_ard","U_B_FullGhillie_sard"];
 _ghillieVest = ["V_Chestrig_rgr"];
@@ -319,19 +319,19 @@ _ghillieBackpack = _backpack;
 _ghillieOutfit = [_ghillieGlasses,_ghillieHelmet,_ghillieUniform,_ghillieVest,_ghillieBackpack];
 
 // Special Operations
-_sfGlasses = [];
-_sfhelmet = ["H_Booniehat_oli","H_Booniehat_dgtl","H_Cap_blk_Raven","H_Bandanna_khk"];
-_sfuniform = _uniform;
-_sfVest = ["V_Chestrig_rgr"];
-_sfBackpack = _backpack;
+_sfGlasses = _glasses;
+_sfhelmet = ["H_PASGT_basic_olive_F"];
+_sfuniform = ["U_I_C_Soldier_Camo_F"];
+_sfVest = ["V_TacVest_camo"];
+_sfBackpack = ["B_Kitbag_sgg"];
 _sfOutfit = [_sfGlasses,_sfhelmet,_sfuniform,_sfVest,_sfBackpack];
 
 // Officer
-_officerGlasses = [];
-_officerHelmet = ["H_MilCap_dgtl"];
-_officeruniform = _uniform;
-_officerVest = _vest;
-_officerBackpack = _backpack;
+_officerGlasses = _glasses;
+_officerHelmet = ["H_Cap_oli_hs","H_Booniehat_khk_hs","H_Bandanna_khk_hs","H_MilCap_grn"];
+_officeruniform = ["U_I_C_Soldier_Camo_F"];
+_officerVest = ["V_TacVest_camo"];
+_officerBackpack = ["B_Kitbag_sgg"];
 _officerOutfit = [_officerGlasses,_officerHelmet,_officeruniform,_officerVest,_officerBackpack];
 
 
@@ -417,7 +417,7 @@ if (_isMan) then {
 	// Add items universal to all units of this faction 
 	// Note these items are the first to get added to the unit
 
-	_unit linkItem _nvg;					// Add and equip the faction's nvg
+	//_unit linkItem _nvg;					// Add and equip the faction's nvg
 	_unit linkItem "ItemMap";				// Add and equip the map
 	_unit linkItem "ItemCompass";			// Add and equip a compass
 	_unit linkItem "ItemWatch";				// Add and equip a watch

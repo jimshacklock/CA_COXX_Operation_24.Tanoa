@@ -60,11 +60,11 @@ _attach2 = "acc_flashlight";	// Flashlight
 _silencer1 = "muzzle_snds_M";	// 5.56 suppressor
 _silencer2 = "muzzle_snds_H";	// 6.5 suppressor
 
-_scope1 = "optic_Holosight";	// Holosight
-_scope2 = "optic_MRCO";			// MRCO Scope - 1x - 6x
+_scope1 = "optic_Holosight_khk_F";	// Holosight
+_scope2 = "optic_AMS_khk";			// MRCO Scope - 1x - 6x
 _scope3 = "optic_SOS";			// SOS Scope - 18x - 75x
 
-_bipod1 = "bipod_01_F_snd";		// Default bipod
+_bipod1 = "bipod_01_F_khk";		// Default bipod
 _bipod2 = "bipod_02_F_blk";		// Black bipod
 
 // Default setup
@@ -94,15 +94,15 @@ _assistantfraction = 0.5;
 // WEAPON SELECTION
 
 // Standard Riflemen 
-_rifle = ["arifle_MX_pointer_F"];
-_riflemag = "30Rnd_65x39_caseless_mag";
+_rifle = ["arifle_MX_khk_F"];
+_riflemag = "30Rnd_65x39_caseless_khaki_mag";
 _riflemag_tr = "30Rnd_65x39_caseless_mag_Tracer";
 _riflemagamount = 10;
 _rifleclasses = ["rif","aar","lat","ammg"];
 
 // Standard Carabineer
-_carbine = ["arifle_MXC_F"];
-_carbinemag = "30Rnd_65x39_caseless_mag";
+_carbine = ["arifle_MXC_khk_F"];
+_carbinemag = "30Rnd_65x39_caseless_khaki_mag";
 _carbinemag_tr = "30Rnd_65x39_caseless_mag_Tracer";
 _carbinemagamount = 6;
 _carbineclasses = ["car","med","sur","mat","amat","mtr","amtr","eng","dem","hmg","ahmg","hat","ahat","sam","asam"];
@@ -115,8 +115,8 @@ _smgmagamount = 5;
 _smgclasses = ["smg","pil","pcc","vc","vg","vd","uav","rad","csw","acsw"];
 
 // Rifle with GL and HE grenades
-_glrifle = ["arifle_MX_GL_F"];
-_glriflemag = "30Rnd_65x39_caseless_mag";
+_glrifle = ["arifle_MX_GL_khk_F"];
+_glriflemag = "30Rnd_65x39_caseless_khaki_mag";
 _glriflemag_tr = "30Rnd_65x39_caseless_mag_Tracer";
 _glriflemagamount = 10;
 _glmag = "1Rnd_HE_Grenade_shell";
@@ -160,21 +160,21 @@ _glflare = ["UGL_FlareWhite_F","UGL_FlareRed_F","UGL_FlareYellow_F","UGL_FlareGr
 _glflareamount = 0;
 
 // Pistols (CO, DC, Automatic Rifleman, Medium MG Gunner)
-_pistol = ["hgun_Pistol_heavy_01_F"];
-_pistolmag = "11Rnd_45ACP_Mag";
+_pistol = ["hgun_P07_khk_F"];
+_pistolmag = "16Rnd_9x21_Mag";
 _pistolmagamount = 2;
 _pistolclasses = ["co","sl","ar","mmg","rad","sur","dm","sn"];
 
 // UNIQUE, ROLE-SPECIFIC EQUIPMENT
 
 // Automatic Rifleman
-_AR = ["arifle_MX_SW_F"];
-_ARmag = "100Rnd_65x39_caseless_mag";
-_ARmag_tr = "100Rnd_65x39_caseless_mag_Tracer";
+_AR = ["arifle_MX_SW_khk_F"];
+_ARmag = "100Rnd_65x39_caseless_khaki_mag";
+_ARmag_tr = "100Rnd_65x39_caseless_khaki_mag_tracer";
 _ARmagamount = 7;
 
 // Medium MG
-_MMG = "MMG_02_sand_F";
+_MMG = "MMG_02_black_F";
 _MMGmag = "130Rnd_338_Mag";
 _MMGmag_tr = "130Rnd_338_Mag";
 _MMGmagamount = 4;
@@ -185,8 +185,8 @@ _MMGmagamount = 4;
 // _MMGmag_tr = ""150Rnd_762x54_Box"_Tracer";
 
 // Marksman rifle - DM
-_DMrifle = "srifle_DMR_03_tan_F";
-_DMriflemag = "20Rnd_762x51_Mag";
+_DMrifle = "srifle_DMR_03_khaki_F";
+_DMriflemag = "ACE_20Rnd_762x51_Mag_Tracer";
 _DMriflemagamount = 10;
 // MAR-10
 //_DMrifle = "srifle_DMR_02_F";
@@ -197,19 +197,19 @@ _RAT = "launch_NLAW_F";
 _RATmag = "NLAW_F";
 _RATmagamount = 2;
 // Medium AT
-_MAT = "launch_NLAW_F";
-_MATmag1 = "NLAW_F";
-_MATmag2 = "NLAW_F";
+_MAT = "launch_MRAWS_green_F";
+_MATmag1 = "MRAWS_HEAT_F";
+_MATmag2 = "MRAWS_HE_F";
 _MATmag1amount = 2;
 _MATmag2amount = 1;
 
 // Surface Air
-_SAM = "launch_B_Titan_F";
+_SAM = "launch_B_Titan_tna_F";
 _SAMmag = "Titan_AA";
 _SAMmagamount = 2;
 
 // Heavy AT
-_HAT = "launch_B_Titan_short_F";
+_HAT = "launch_B_Titan_short_tna_F";
 _HATmag1 = "Titan_AT";
 _HATmag2 = "Titan_AP";
 _HATmag1amount = 2;
@@ -235,7 +235,7 @@ _engineeritems = ["ACE_wirecutter","ACE_DefusalKit"];
 _entrenchingtool = "ACE_EntrenchingTool";
 _entrenchingclasses = ["med","aar","lat","ammg","ahmg","acsw","amat","amtr","sp","dem","eng","rif","car","gren"];
 // Night Vision Goggles (NVGoggles)
-_nvg = "NVGoggles";
+_nvg = "NVGoggles_tna_F";
 
 // UAV Terminal
 _uavterminal = "B_UavTerminal";	  // BLUFOR - FIA
@@ -246,7 +246,7 @@ _chemlightsamount = 0;
 //Binoculars 
 _binocular = "Binocular"; // Regular 
 _rangefinder = "Rangefinder"; // Rangefinder
-_laserdesignator = "Laserdesignator"; // Laser Designator
+_laserdesignator = "Laserdesignator_01_khk_F"; // Laser Designator
 
 // ====================================================================================
 
@@ -272,41 +272,41 @@ _officer = ["co","sur","rad"];
 
 // Default uniform - Medium uniform
 _glasses = [];
-_helmet = ["H_HelmetB","H_HelmetB_plain_mcamo"];
-_uniform = ["U_B_CombatUniform_mcam","U_B_CombatUniform_mcam_vest"];
-_vest = ["V_PlateCarrier1_rgr","V_PlateCarrier2_rgr"]; 	// default for all infantry classes
-_backpack = ["B_AssaultPack_mcamo"];
+_helmet = ["H_HelmetB_Enh_tna_F","H_HelmetSpecB_paint1","H_HelmetSpecB_snakeskin"];
+_uniform = ["U_B_T_Soldier_F","U_B_T_Soldier_AR_F","U_B_T_Soldier_SL_F"];
+_vest = ["V_PlateCarrier1_tna_F"]; 	// default for all infantry classes
+_backpack = ["B_AssaultPack_tna_F"];
 _outfit = [_glasses,_helmet,_uniform,_vest,_backpack];
 
 // Light Uniform, big backpack
 _lightGlasses = _glasses;
 _lightHelmet = _helmet;
 _lightuniform = _uniform;
-_lightVest = ["V_BandollierB_cbr","V_BandollierB_khk"];
-_lightBackpack = ["B_Carryall_mcamo"]; //Large backpack
+_lightVest = ["V_Chestrig_rgr"];
+_lightBackpack = ["B_Bergen_tna_F"]; //Large backpack
 _lightOutfit = [_lightGlasses,_lightHelmet,_lightuniform,_lightVest,_lightBackpack];
 
 // Heavy Uniform, small backpack
 _heavyGlasses = [];
-_heavyHelmet = ["H_HelmetSpecB_blk"];
-_heavyUniform = ["U_B_CombatUniform_mcam_vest"];
-_heavyVest = ["V_PlateCarrier3_rgr"];
-_heavyBackpack = ["B_AssaultPack_mcamo"]; //Small backpack to avoid overencumberance
+_heavyHelmet = _helmet;
+_heavyUniform = _uniform;
+_heavyVest = ["V_PlateCarrierSpec_tna_F"];
+_heavyBackpack = ["B_AssaultPack_tna_F"]; //Small backpack to avoid overencumberance
 _heavyOutfit = [_heavyGlasses,_heavyHelmet,_heavyUniform,_heavyVest,_heavyBackpack];
 
 // Pilot
 _pilotGlasses = [];
 _pilotHelmet = ["H_PilotHelmetHeli_B"];
 _pilotUniform = ["U_B_HeliPilotCoveralls"];
-_pilotVest = ["V_TacVest_blk"];
-_pilotBackpack = ["B_AssaultPack_mcamo"];
+_pilotVest = ["V_TacVest_oli"];
+_pilotBackpack = ["B_AssaultPack_tna_F"];
 _pilotOutfit = [_pilotGlasses,_pilotHelmet,_pilotUniform,_pilotVest,_pilotBackpack];
 
 // Crewman
 _crewGlasses = [];
 _crewHelmet = ["H_HelmetCrew_B"];
-_crewUniform = ["U_B_CombatUniform_mcam_vest"];
-_crewVest = ["V_TacVest_blk"];
+_crewUniform = _uniform;
+_crewVest = ["V_TacVest_oli"];
 _crewBackpack = _backpack;
 _crewOutfit = [_crewGlasses,_crewHelmet,_crewUniform,_crewVest,_crewBackpack];
 
@@ -320,17 +320,17 @@ _ghillieOutfit = [_ghillieGlasses,_ghillieHelmet,_ghillieUniform,_ghillieVest,_g
 
 // Special Operations
 _sfGlasses = [];
-_sfhelmet = ["H_HelmetSpecB","H_HelmetSpecB_paint1","H_HelmetSpecB_paint2","H_HelmetSpecB_blk"];
-_sfuniform = ["U_B_SpecopsUniform_sgg"];
-_sfVest = ["V_PlateCarrierSpec_rgr"];
+_sfhelmet = ["H_HelmetB_Light_tna_F","H_HelmetB_light","H_HelmetB_light_grass","H_HelmetB_light_snakeskin"];
+_sfuniform = _uniform;
+_sfVest = ["V_PlateCarrier2_tna_F"];
 _sfBackpack = _backpack;
 _sfOutfit = [_sfGlasses,_sfhelmet,_sfuniform,_sfVest,_sfBackpack];
 
 // Officer
 _officerGlasses = [];
-_officerHelmet = ["H_MilCap_mcamo"];
-_officeruniform = ["U_B_CombatUniform_mcam"];
-_officerVest = ["V_BandollierB_rgr"];
+_officerHelmet = _helmet;
+_officeruniform = _uniform;
+_officerVest = ["V_PlateCarrier2_tna_F"];
 _officerBackpack = _backpack;
 _officerOutfit = [_officerGlasses,_officerHelmet,_officeruniform,_officerVest,_officerBackpack];
 
@@ -460,7 +460,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_grenade,_grenadeamount];
 		_unit addmagazines [_mgrenade,_Mgrenadeamount];
 		_unit addmagazines [_smokegrenade,_smokegrenadeamount];
-		_unit addWeapon _rangefinder;
+		_unit addItem _laserdesignator;
+		_unit addmagazines ["Laserbatteries",1];
 		_unit linkItem "ItemGPS";
 		_unit addItem "ACE_microDAGR";
 	};
@@ -470,7 +471,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_grenade,_grenadeamount];
 		_unit addmagazines [_mgrenade,_Mgrenadeamount];
 		_unit addmagazines [_smokegrenade,_smokegrenadeamount];
-		_unit addWeapon _rangefinder;
+		_unit addItem _laserdesignator;
+		_unit addmagazines ["Laserbatteries",1];
 		_unit linkItem "ItemGPS";
 		_unit addItem "ACE_microDAGR";
 	};
@@ -481,9 +483,11 @@ switch (_typeofUnit) do
 		_unit addmagazines [_grenade,_grenadeamount];
 		_unit addmagazines [_mgrenade,_Mgrenadeamount];
 		_unit addmagazines [_smokegrenade,_smokegrenadeamount];
-		_unit addWeapon _rangefinder;
+		_unit addItem _laserdesignator;
+		_unit addmagazines ["Laserbatteries",1];
 		_unit linkItem "ItemGPS";
 		_unit addItem "ACE_microDAGR";
+
 	};
 
 // LOADOUT: MEDIC
@@ -580,7 +584,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_DMriflemag,_DMriflemagamount];
 		_unit addweapon _DMrifle;
 
-		_attachments = [_attach1,_scope2];
+		_attachments = [_attach1,_scope2,_bipod1];
 	};
 
 // LOADOUT: MEDIUM MG GUNNER
